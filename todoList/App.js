@@ -4,8 +4,17 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello World</Text>
-      <StatusBar style="auto" />
+      
+    <View style={styles.tasksWrapper}>
+      <Text style={styles.sectionTitle}>Today's Tasks</Text>
+
+      <View style={styles.items}>
+        
+      </View>
+
+    </View>
+
+
     </View>
   );
 }
