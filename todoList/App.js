@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { KeyboardAvoidingView, Platform, StyleSheet, Text, View,TextInput } from 'react-native';
+import { TouchableOpacity } from 'react-native-web';
 import Task from './components/Task';
 
 export default function App() {
@@ -16,6 +17,18 @@ export default function App() {
     </View>
 
 
+
+      <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding : "height'}
+      style={styles.writeTaskWrapper}>
+      <TextInput Style={styles.input} placeholder={'Write a task'} />
+
+      <TouchableOpacity>
+        <View style={styles.addWrapper}>
+          <Text style={styles.addText}>+</Text>
+        </View>
+      </TouchableOpacity>
+      </KeyboardAvoidingView>
     </View>
   );
 }
