@@ -10,7 +10,7 @@ export default function App() {
       <Text style={styles.sectionTitle}>Today's Tasks</Text>
 
       <View style={styles.items}>
-        
+        <Task>text={"Task 1"}</Task>
       </View>
 
     </View>
